@@ -28,6 +28,10 @@ main {
   text-align: center;
 }
 
+header {
+  text-align: center;
+}
+
 header #header-container {
   display: block;
   clear: both;
