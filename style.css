@@ -1,0 +1,107 @@
+@@charset 'UTF-8';
+
+* {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: normal;
+  font-weight: normal;
+  font-family: 'Noto Sans', 'Noto Sans JP', 'sans-serif';
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+main {
+  width: 100%;
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  margin: 64px auto;
+  display: block;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+h5 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+h6 {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  font-size: inherit;
+}
+
+a.Decorated {
+  color: #808080;
+  border-bottom: dashed 0.5px #808080;
+}
+
+i {
+  font-size: inherit;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.limited-width {
+  max-width: 1168px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+@@media and (min-width: 1024px) {
+
+}
+
+@@media and (max-width: 1023px) {
+
+}
