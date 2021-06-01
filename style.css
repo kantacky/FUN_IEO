@@ -17,6 +17,12 @@
   outline: none;
 }
 
+body {
+  width: 100%;
+  text-align: center;
+
+}
+
 main {
   width: 100%;
   text-align: center;
@@ -24,8 +30,18 @@ main {
 
 #container {
   width: 100%;
-  margin: 64px 0;
+  margin: 64px auto;
   display: block;
+}
+
+.limited-width {
+  width: 100%;
+  max-width: 1168px;
+}
+
+.a-content {
+  width: calc(100% - 32px);
+  margin: 0 16px;
 }
 
 h1 {
@@ -98,12 +114,6 @@ i {
 
 .align-center {
   text-align: center;
-}
-
-.limited-width {
-  max-width: 1168px;
-  margin: 32px auto;
-  padding: 0 32px;
 }
 
 @@media and (min-width: 1024px) {
