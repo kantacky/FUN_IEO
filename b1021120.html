@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang='ja'>
+<html lang="ja">
   <head>
-    <meta charset='utf-8' />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Future University Hakodate</title>
-    <link rel='stylesheet' href='./style.css' />
+    <title>Base</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
     <header>
-      <div id='header-container' class='limited-width a-content'>
-        <div id='header-logo'>
-          <a href='./b1021120.html'>
+      <div id="header-container" class="limited-width a-content">
+        <div id="header-logo">
+          <a href="#">
             <h1>FUN</h1>
           </a>
         </div>
-        <div id='navigation'>
+        <div id="navigation">
           <nav>
             <ul>
               <li>
-                <a href='./b1021120.html'>トップ</a>
+                <a href="#">トップ</a>
               </li>
               <li>
-                <a href='./before.html'>入学前にすべきこと</a>
+                <a href="#before">入学前にすべきこと</a>
               </li>
               <li>
-                <a href='./after.html'>入学してからすべきこと</a>
+                <a href="#after">入学してからすべきこと</a>
               </li>
             </ul>
           </nav>
@@ -32,12 +35,31 @@
       </div>
     </header>
     <main>
-      <div id='container' class='limited-width align-center'>
-        <div class='a-content align-left'>
-          <h1>Hello, World!</h1>
+      <div id="root"></div>
+      <script type="text/babel">
+        const element = (
+          <div>
+            <div id="container" className="limited-width align-center">
+              <div className="a-content align-left">
+                <h1>Hello, World!</h1>
+              </div>
+            </div>
+          </div>
+        );
+        ReactDOM.render(
+          element,
+          document.getElementById('root')
+        );
+      </script>
+    </main>
+    <footer>
+      <div class="limited-width">
+        <div id="copyright">
+          <p>
+            Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Kanta Oikawa. All Rights Reserved. 
+          </p>
         </div>
       </div>
-    </main>
-    <footer></footer>
+    </footer>
   </body>
 </html>

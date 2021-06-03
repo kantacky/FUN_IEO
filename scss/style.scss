@@ -30,57 +30,59 @@ main {
 
 header {
   text-align: center;
+  #header-container {
+    margin: 0 auto;
+    padding: 16px;
+    display: block;
+    clear: both;
+  }
+  
+  #header-container::after {
+    display: block;
+    clear: both;
+    content: '';
+    margin-bottom: 64px;
+  }
+  
+  #header-logo {
+    display: block;
+    float: left;
+  
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  #navigation {
+    display: block;
+    float: right;
+    
+    ul {
+      list-style: none;
+      display: block;
+      
+      li {
+        margin: 0 32px;
+        display: inline-block;
+        vertical-align: middle;
+
+        a {
+          transition: .2s;
+          
+          &:hover {
+            cursor: pointer;
+            color: #696969;
+          }
+        }
+      }
+    }
+  }
 }
 
-header #header-container {
-  margin: 0 auto;
-  padding: 16px;
-  display: block;
-  clear: both;
-}
-
-header #header-container::after {
-  display: block;
-  clear: both;
-  content: '';
-}
-
-header #header-logo {
-  display: block;
-  float: left;
-}
-
-header #header-logo h1 {
-  font-size: 24px;
-}
-
-header #navigation {
-  display: block;
-  float: right;
-}
-
-header #navigation ul {
-  list-style: none;
-  display: block;
-}
-
-header #navigation ul li {
-  margin: 0 32px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-header #navigation ul li a {
-  transition: .2s;
-}
-
-header #navigation ul li a:hover {
-  cursor: pointer;
-  color: #696969;
-}
 
 footer {
   width: 100%;
+  margin: 64px 0;
   text-align: center;
 }
 
@@ -150,11 +152,10 @@ img {
 
 a {
   font-size: inherit;
-}
-
-a.Decorated {
-  color: #808080;
-  border-bottom: dashed 0.5px #808080;
+  &.decorated {
+    color: #808080;
+    border-bottom: dashed 0.5px #808080;
+  }
 }
 
 i {
@@ -169,10 +170,10 @@ i {
   text-align: center;
 }
 
-@media and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
 }
 
-@media and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 
 }
