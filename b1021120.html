@@ -21,13 +21,16 @@
           <nav>
             <ul>
               <li>
-                <a href="#">トップ</a>
+                <a href="#before">Before Enrollment</a>
+                <div className="hover-bar-bottom"></div>
               </li>
               <li>
-                <a href="#before">入学前にすべきこと</a>
+                <a href="#after">After Enrollment</a>
+                <div className="hover-bar-bottom"></div>
               </li>
               <li>
-                <a href="#after">入学してからすべきこと</a>
+                <a href="#contact">Contact</a>
+                <div className="hover-bar-bottom"></div>
               </li>
             </ul>
           </nav>
@@ -40,8 +43,13 @@
         const element = (
           <div>
             <div id="container" className="limited-width align-center">
-              <div className="a-content align-left">
+              <div id="top">
                 <h1>Hello, World!</h1>
+              </div>
+              <div id="before" className="a-content align-left">
+                <article>
+                  <h1>入学前するまえに</h1>
+                </article>
               </div>
             </div>
           </div>
@@ -56,7 +64,7 @@
       <div class="limited-width">
         <div id="copyright">
           <p>
-            Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Kanta Oikawa. All Rights Reserved. 
+            Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> <a class="decorated" href="https://kantacky.com" rel="noopener noreferer" target="_blank">Kanta Oikawa</a>. All Rights Reserved. 
           </p>
         </div>
       </div>

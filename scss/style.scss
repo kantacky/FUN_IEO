@@ -30,6 +30,7 @@ main {
 
 header {
   text-align: center;
+
   #header-container {
     margin: 0 auto;
     padding: 16px;
@@ -41,7 +42,6 @@ header {
     display: block;
     clear: both;
     content: '';
-    margin-bottom: 64px;
   }
   
   #header-logo {
@@ -67,11 +67,12 @@ header {
         vertical-align: middle;
 
         a {
-          transition: .2s;
+          transition: .1s;
           
           &:hover {
             cursor: pointer;
             color: #696969;
+            border-bottom: dotted 2px #a0a0a0;
           }
         }
       }
@@ -168,6 +169,16 @@ i {
 
 .align-center {
   text-align: center;
+}
+
+#top {
+  width: calc(100vw - 128px);
+  height: 100vh;
+  padding: 0 64px;
+  background-image: url("../img/img01.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1024px) {
