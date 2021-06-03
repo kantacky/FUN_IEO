@@ -79,7 +79,10 @@ header #navigation ul li a:hover {
   color: #696969;
 }
 
-footer {}
+footer {
+  width: 100%;
+  text-align: center;
+}
 
 #container {
   width: 100%;
@@ -90,6 +93,7 @@ footer {}
 .limited-width {
   width: 100%;
   max-width: 1168px;
+  margin: 0 auto;
 }
 
 .a-content {
@@ -155,10 +159,6 @@ a.Decorated {
 
 i {
   font-size: inherit;
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 .align-left {
