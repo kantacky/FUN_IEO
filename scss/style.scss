@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans&family=Noto+Sans+JP&display=swap');
 
 * {
   width: auto;
@@ -29,27 +29,40 @@ main {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   text-align: center;
+  background-color: rgba(16, 16, 16, 0.8);
 
   #header-container {
     margin: 0 auto;
     padding: 16px;
-    display: block;
-    clear: both;
-  }
-  
-  #header-container::after {
-    display: block;
-    clear: both;
-    content: '';
+
+    &::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      transition: .3s;
+      color: #ffffff;
+      
+      &:hover {
+        cursor: pointer;
+        color: #b0b0b0;
+      }
   }
   
   #header-logo {
     display: block;
     float: left;
-  
-    h1 {
-      font-size: 24px;
     }
   }
 
@@ -65,16 +78,6 @@ header {
         margin: 0 32px;
         display: inline-block;
         vertical-align: middle;
-
-        a {
-          transition: .1s;
-          
-          &:hover {
-            cursor: pointer;
-            color: #696969;
-            border-bottom: dotted 2px #a0a0a0;
-          }
-        }
       }
     }
   }
@@ -173,12 +176,13 @@ i {
 
 #top {
   width: calc(100vw - 128px);
-  height: 100vh;
-  padding: 0 64px;
-  background-image: url("../img/img01.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: calc(100vh - 256px);
+  margin-top: -16px;
+  padding: 128px 64px;
+  background-color: #333333;
+  h1 {
+    color: #ffffff;
+  }
 }
 
 @media screen and (min-width: 1024px) {

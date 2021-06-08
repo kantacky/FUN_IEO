@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Base</title>
+    <title>SUBJECTS AT FUN</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
@@ -13,24 +13,42 @@
     <header>
       <div id="header-container" class="limited-width a-content">
         <div id="header-logo">
-          <a href="#">
-            <h1>FUN</h1>
+          <a href="#top">
+            <h1>SUBJECTS AT FUN</h1>
           </a>
         </div>
         <div id="navigation">
+          <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <nav>
             <ul>
               <li>
-                <a href="#before">Before Enrollment</a>
-                <div className="hover-bar-bottom"></div>
+                <a href="#intro">
+                  <h1>INTRO</h1>
+                </a>
               </li>
               <li>
-                <a href="#after">After Enrollment</a>
-                <div className="hover-bar-bottom"></div>
+                <a href="#coding">
+                  <h1>CODING</h1>
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
-                <div className="hover-bar-bottom"></div>
+                <a href="#math">
+                  <h1>MATH</h1>
+                </a>
+              </li>
+              <li>
+                <a href="#liberals">
+                  <h1>LIBERALS</h1>
+                </a>
+              </li>
+              <li>
+                <a href="#contact">
+                  <h1>CONTACT</h1>
+                </a>
               </li>
             </ul>
           </nav>
@@ -40,24 +58,36 @@
     <main>
       <div id="root"></div>
       <script type="text/babel">
-        const element = (
-          <div>
-            <div id="container" className="limited-width align-center">
-              <div id="top">
-                <h1>Hello, World!</h1>
+        function helloText() {
+          const hello_text_list = ['World', 'Code', 'Tech', 'Univ', 'Math', 'Science', 'Future', '日本語', 'English', 'Society'];
+          return hello_text_list[Math.floor(Math.random() * 10)];
+        }
+        
+        function App(props) {
+          return (
+            <div id="container">
+              <div id="top" className="align-center">
+                <div className="a-content limited-width">
+                  <h1>Hello, { props.hello_text }!</h1>
+                </div>
               </div>
-              <div id="before" className="a-content align-left">
-                <article>
-                  <h1>入学前するまえに</h1>
-                </article>
+              <div id="intro" className="align-center">
+                <div className="a-content limited-width align-left">
+                  <article>
+                    <div className="a-content-title">
+                      <h4>INTRODUCTION</h4>
+                      <h1>イントロダクション</h1>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
-          </div>
-        );
-        ReactDOM.render(
-          element,
-          document.getElementById('root')
-        );
+          );
+        }
+
+        const element = <App hello_text={ helloText() } />;
+        
+        ReactDOM.render(element, document.getElementById('root'));
       </script>
     </main>
     <footer>
