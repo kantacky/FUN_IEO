@@ -92,8 +92,6 @@ footer {
 
 #container {
   width: 100%;
-  margin: 16px auto;
-  display: block;
 }
 
 .limited-width {
@@ -104,7 +102,7 @@ footer {
 
 .a-content {
   width: calc(100% - 64px);
-  margin: 16px 32px;
+  margin: 32px;
 }
 
 h1 {
@@ -155,15 +153,11 @@ img {
 }
 
 a {
-  font-size: inherit;
+  decorate: none;
   &.decorated {
     color: #808080;
     border-bottom: dashed 0.5px #808080;
   }
-}
-
-i {
-  font-size: inherit;
 }
 
 .align-left {
@@ -177,11 +171,22 @@ i {
 #top {
   width: calc(100vw - 128px);
   height: calc(100vh - 256px);
-  margin-top: -16px;
+  margin: 0;
   padding: 128px 64px;
   background-color: #333333;
-  h1 {
+  h1, p, i {
     color: #ffffff;
+  }
+}
+
+.jump-to-bottom {
+  margin: 64px 0px;
+  p, i {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  i {
+    font-size: 16px;
   }
 }
 

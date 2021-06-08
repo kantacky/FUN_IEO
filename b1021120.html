@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SUBJECTS AT FUN</title>
+    <title>SUBS AT FUN</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://kit.fontawesome.com/51e339748b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <div id="header-container" class="limited-width a-content">
         <div id="header-logo">
           <a href="#top">
-            <h1>SUBJECTS AT FUN</h1>
+            <h1>SUBS AT FUN</h1>
           </a>
         </div>
         <div id="navigation">
@@ -66,13 +67,19 @@
         function App(props) {
           return (
             <div id="container">
-              <div id="top" className="align-center">
-                <div className="a-content limited-width">
+              <div id="top" className="a-content align-center">
+                <div className="limited-width">
                   <h1>Hello, { props.hello_text }!</h1>
                 </div>
+                <div className="jump-to-bottom">
+                  <a href="#intro">
+                    <p>JUMP TO INTRO</p>
+                    <i class="fas fa-arrow-circle-down"></i>
+                  </a>
+                </div>
               </div>
-              <div id="intro" className="align-center">
-                <div className="a-content limited-width align-left">
+              <div id="intro" className="a-content align-center">
+                <div className="limited-width align-left">
                   <article>
                     <div className="a-content-title">
                       <h4>INTRODUCTION</h4>
