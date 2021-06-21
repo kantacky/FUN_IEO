@@ -76,6 +76,10 @@ a {
   }
 }
 
+body {
+  background-color: #e3e3e3;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -276,12 +280,16 @@ form {
 
 @media screen and (max-width: 1023px) {
   header {
+    #header-logo {
+      margin: 12px 4px;
+    }
+
     #hamburger {
       display: block;
       div {
-        width: 32px;
+        width: 40px;
         height: 1px;
-        margin: 16px 0px;
+        margin: 12px 4px;
         background-color: #696969;
         &:hover {
           cursor: pointer;
@@ -290,6 +298,19 @@ form {
     }
     nav {
       display: none;
+      &.show {
+        width: calc(100vw - 32px);
+        height: calc(100vh);
+        margin: 0;
+        padding: 16px 0px;
+        background-color: rgba(16, 16, 16, 0.8);
+        ul {
+          text-align: right;
+          li {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
